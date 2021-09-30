@@ -24,16 +24,20 @@ function App() {
                                               setZeigeWarnung(false)}}>
           +
         </button>
-        <button type="button" onClick={() => setErgebnis(rechner.onSubtraktion(wert1, wert2))}>
+        <button type="button" onClick={() => {setErgebnis(rechner.onSubtraktion(wert1, wert2))
+                                              setZeigeWarnung(false)}}>
           -
         </button>
-        <button type="button" onClick={() => setErgebnis(rechner.onMultiplikation(wert1, wert2))}>
+        <button type="button" onClick={() => {setErgebnis(rechner.onMultiplikation(wert1, wert2))
+                                              setZeigeWarnung(false)}}>
           *
         </button>
-        <button type="button" onClick={() => setErgebnis(rechner.onDivision(wert1, wert2))}>
+        <button type="button" onClick={() => {setErgebnis(rechner.onDivision(wert1, wert2))
+                                              setZeigeWarnung(false)}}>
           /
         </button>
-        <button type="button" onClick={() => setErgebnis(rechner.onProzent(wert1, wert2))}>
+        <button type="button" onClick={() => {setErgebnis(rechner.onProzent(wert1, wert2))
+                                              setZeigeWarnung(false)}}>
           in %
         </button>
         <button type="button" onClick={() => {
@@ -45,7 +49,7 @@ function App() {
         </button>
         <button type="button" onClick={() => {
                                               if (wert2) {
-                                              alert('Es wird nur mit Eingabefeld 1 gerechnet!')
+                                              setZeigeWarnung(true); 
                                               } 
                                               setErgebnis(rechner.onQuadrat(wert1))}}>
           x²
